@@ -1,0 +1,659 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    width: 100%;
+    height: 12vh;
+    background: radial-gradient( rgba(255, 255, 255, 0.904) , rgb(202, 202, 202));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0%;
+    z-index: 100;
+}
+header ::selection{
+    background-color: #ED373B;
+    color: white;
+}
+header span{
+    margin-right: 40px;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+header>ul{
+    list-style: none;
+    display: flex;
+    height: 100%;
+}
+header li{
+    font-weight: 600;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 100%;
+    padding-top: 3.1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    z-index: 10;
+}
+header li:hover{
+    background-color: #ED373B;
+    color: white;
+}
+header li:active{
+    border-bottom: 3px solid #ED373B;
+}
+#product::after{
+    content: "YBR125";
+    display: block;
+  background-color: white;
+  color: #ED373B;
+  margin-top: 20% !important;
+  border-bottom: 2px groove #ED373B;
+  width: 120%;
+  margin-left: -9px;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  align-items: center;
+  visibility: hidden;
+  position: relative;
+  z-index: 10;
+}
+#product:hover::after{
+    animation-name: after;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+}
+#sales::before{
+    content: "▼";
+    position: absolute;
+    top: 48px;
+    left: 750px;
+}
+#style::before{
+    content: "▼";
+    position: absolute;
+    top: 48px;
+    left: 883px;
+}
+#product::before{
+    content: "▼";
+    position: absolute;
+    top: 48px;
+    left: 485px;
+}
+#sales::after{
+    z-index: 100 !important;
+    content: "Service And Warranty";
+    display: block;
+  background-color: white;
+  color: #ED373B;
+  margin-top: 20% !important;
+  border-bottom: 2px groove #ED373B;
+  width: 110%;
+  margin-left: -9px;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  align-items: center;
+  visibility: hidden;
+  position: relative;
+  padding-left: 7px;
+}
+#sales:hover::after{
+    animation-name: after;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#style::after{
+    content: "Bikers Gallery";
+    display: block;
+  background-color: white;
+  color: #ED373B;
+  margin-top: 20% !important;
+  border-bottom: 2px groove #ED373B;
+  width: 110%;
+  margin-left: -9px;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  align-items: center;
+  visibility: hidden;
+  position: relative;
+  padding-left: 7px;
+}
+#style:hover::after{
+    animation-name: after;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+header i{
+    display: none;
+}
+@keyframes after {
+    0%{visibility: visible;
+    opacity: 20%;
+    bottom: -20%;
+    }
+    50%{
+        bottom: -10%;
+    }
+    100%{
+        bottom: 0%;
+        visibility:visible;
+        z-index: 10;
+
+    }
+}
+.bike{
+    width: 100%;
+    height: 80vh;
+    border: 2px solid;
+    margin-top: 5.65%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+}
+.bike img{
+    width: 100.2%;
+    height: 100%;
+}
+.left,.right{
+    background-color: #ed373ade;
+    width: 100px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+}
+.left{
+    position: absolute;
+    left: -1%;
+    top: 40%;
+}
+.right{
+    position: absolute;
+    left: 92.8%;
+    top: 40%;
+}
+#img1{
+    z-index: -100 !important;
+    position: relative;
+    animation-name: slider;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-direction: alternate;
+}
+#img2{
+    z-index: -100 !important
+    z-index: -5;
+    position: relative;
+    animation-name: slider;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-direction: alternate;
+}
+@keyframes slider{
+    0%{
+        left:-100%;
+    }
+    30%{
+        left: -100%;
+    }
+    100%{
+        left:0%;
+    }
+}
+.img-footer{
+    background-color: #ed373ac4;
+    width: 100%;
+    height: 8vh;
+    position: absolute;
+    top: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-footer ::selection{
+    background-color: #ED373B;
+    color: white;
+}
+.img-footer i{
+    font-size: 2.5rem;
+}
+.img-footer div{
+    color: white;
+    font-size: 1.5rem !important;
+    margin-right: 5%;
+}
+.contact{
+    font-size: 5rem;
+    color: rgb(0, 163, 87);
+    position: fixed;
+    left: 2%;
+    top: 82%;
+}
+.contact span{
+    font-size: 1rem;
+    background-color: aliceblue;
+    padding: 5% 15%;
+    color: black;
+    margin-top: -5% !important;
+    border-radius: 20px;
+}
+.contact a{
+    text-decoration: none;
+    color: rgb(0, 163, 87);
+}
+.lifestyle{
+    width: 100%;
+    height: 90vh;
+}
+.lifestyle .h{
+    font-weight: 100 !important;
+    font-size: 3rem;
+    margin-top: 5%;
+    text-align: center;
+}
+.bike-cards{
+    width: 90%;
+    margin: auto;
+    height: 73%;
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.bike-cards .card{
+    width: 350px;
+    height: 380px;
+    position: relative;
+}
+.bike-cards figure{
+    width: 100%;
+    height: 100%;
+}
+.bike-cards figure img{
+    width: 100%;
+    height: 75%;
+}
+.bike-cards figcaption{
+    background-color: black;
+    margin-top: -4px !important;
+    height: 25%;
+    padding: 5% 5%;
+}
+.bike-cards figcaption p{
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 3%;
+}
+.bike-cards figcaption span{
+    color: white;
+    margin-right: 8%;
+}
+.card.mid{
+    width: 400px;
+    height: 420px;
+    animation-name: card-slide;
+    animation-duration: 6s;
+    z-index: 2;
+    animation-delay: 2s;
+    animation-timeline: view();
+}
+.bike-cards figcaption i{
+    margin-right: 2%;
+}
+@keyframes card-slide {
+    0%{
+        left: 0%;
+    }
+    30%{
+        left: -35%;
+        transform: scale(0.9);
+    }
+    60%{
+        left: 35%;
+        transform: scale(0.9);
+    }
+    100%{
+        left: 0%;
+        transform: scale(1);
+    }
+}
+.card.card-left{
+    position: relative;
+    animation-name: card-slide2;
+    animation-duration: 6s;
+    z-index: 1;
+    animation-delay: 2s;
+    animation-timeline: view();
+
+}
+@keyframes card-slide2 {
+    0%{
+        left: 0%;
+    }
+    30%{
+        left: 70%;
+        transform: scale(1);
+    }
+    60%{
+        left: 35%;
+        transform: scale(1.1);
+    }
+    100%{
+        left: 0%;
+        transform: scale(1);
+    }
+}
+.card.card-right{
+    position: relative;
+    animation-name: card-slide3;
+    animation-duration: 6s;
+    z-index: 3;
+    animation-delay: 2s;
+    animation-timeline: view();
+}
+@keyframes card-slide3 {
+    0%{
+        left: 0%;
+    }
+    30%{
+        left: -35%;
+        transform: scale(1.1);
+    }
+    60%{
+        left: -70%;
+        transform: scale(1);
+    }
+    100%{
+        left: 0%;
+        transform: scale(1);
+    }
+}
+.video{
+    width: 100%;
+    height: 118vh;
+    border: 2px solid;
+}
+.video video{
+    width: 100%;
+    
+}
+.group-video{
+    width: 100%;
+    height: 90vh;
+    border: 2px solid;
+    background: linear-gradient(to right,white , rgb(238, 237, 237));
+}
+.group-video h1{
+    font-size: 3rem;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 5%;
+}
+.videos{
+    margin-top: 5%;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    padding: 1% 10%;
+    position: relative;
+}
+.videos video{
+    width: 500px;
+    height: 46vh;
+}
+.videos video:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 10px 10px grey;
+}
+#v3:hover{
+    transform: scale(1.05);
+    box-shadow: none;
+}
+#v2{
+    position: absolute;
+    left: 20%;
+    z-index: 2;
+}
+#v3{
+    position: absolute;
+    left: 30%;
+    top: -20%;
+    z-index: 4;
+    height: 60vh;
+}
+#v1{
+    height: 40vh;
+}
+#v4{
+    position: absolute;
+    left: 41%;
+    z-index: 3;
+}
+#v5{
+    position: absolute;
+    left: 52%;
+    height: 40vh;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    background-color: #ED373B;
+    width: 100%;
+    height: 10vh;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+body ::selection{
+    background-color: #ED373B;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:430px) {
+    header{
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    } 
+    header i{
+        display: flex;
+        font-size: 2rem;
+        color: #ED373B;
+        font-weight: 900;
+    }  
+    header ul{
+        display: none;
+    } 
+    .bike{
+        margin-top: 15%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 350px;
+        overflow-x: hidden !important;
+    }
+    .bike img{
+        width: 100%;
+        height: 350px;
+    }
+    #img1{
+        animation-name: slider;
+        animation-delay: none;
+        animation-duration: 4s;
+        animation-direction: alternate;
+        animation-fill-mode: backwards;
+    }
+    #img2{
+        animation-name: slider;
+        animation-delay: none;
+        animation-duration: 4s;
+        animation-direction: alternate;
+        animation-fill-mode: backwards;
+    }
+    .left,.right{
+        display: none;
+    }
+    .img-footer{
+        position: absolute;
+        top: 370px;
+        height: 5vh;
+        display: flex;
+        align-items: center;
+    }
+    .img-footer .instagram{
+        display: none;
+    }
+    .img-footer .youtube{
+        display: none;
+    }
+    .img-footer .facebook{
+        display: none;
+    }
+    .contact{
+        position: fixed !important;
+        bottom: 100px;
+        font-size: 3rem;
+        display: none;
+    }
+    .contact span{
+        display: none;
+    }
+    .lifestyle .bike-cards{
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around !important;
+        align-items: center;
+        height: 1180px;
+    }
+    .lifestyle{
+        height: 1320px;
+        width: 100%;
+    }
+    .lifestyle .bike-cards .card{
+        animation: none;
+        margin: 20px 0px;
+        height: 350px;
+        width: 330px;
+    }
+    .card.mid{
+        width: 330px !important;
+    }
+    .card:hover{
+        transform: scale(1.1);
+        box-shadow: 2px 2px 10px 10px rgb(192, 192, 192);
+    }
+    .video{
+        height: 245px;
+        background-color: white;
+        border: none;
+    }
+    .video video{
+        width: 100%;
+        height: 100%;
+    }
+    .group-video{
+        height: 800px;
+        border: none;
+        margin-top: 0px;
+        padding-top: 5%;
+    }
+    .videos{
+        height: 600px;
+        position: relative;
+    }
+    .videos #v1{
+        position: absolute;
+        top: 40px;
+        left: 15%;
+        height: 150px;
+        width:70%;
+        border: 3px groove grey;
+    }
+    .videos #v2{
+        position: absolute;
+        top: 90px;
+        left: 10%;
+        height: 250px;
+        width: 80%;
+    }
+    .videos #v3{
+        position: absolute;
+        top: 170px;
+        left: 5%;
+        height: 250px;
+        width: 90%;
+    }
+    .videos #v4{
+        position: absolute;
+        top: 250px;
+        left: 10%;
+        height: 280px;
+        width: 80%;
+    }
+    .videos #v5{
+        position: absolute;
+        top: 420px;
+        left: 15%;
+        height: 150px;
+        width:70%;
+        border: 3px groove grey;
+    }
+    .videos video{
+        box-shadow: none !important;
+    }
+    footer{
+        font-size: 1.3rem;
+    }
+}
